@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #f2f2f2; */
+  background-color: #222;
+  background-image: radial-gradient(ellipse at 10% 90%, #3c2d835f 0%, transparent 55%), radial-gradient(ellipse at 90% 90%, #c33c655f 0%, transparent 55%), radial-gradient(ellipse at 90% 10%, #4a74dc5f 0%, transparent 55%), radial-gradient(ellipse at 10% 10%, #35244f5f 0%, transparent 55%);
+  background-size: 100% 200%;
+  overflow: hidden;
+  perspective: 1440px;
+  animation: bg 1s ease-in-out infinite alternate;
+}
+
+.bars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+.bars section {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  margin: 0;
+}
+.bars section.top {
+  flex-grow: 5;
+}
+.bars section.abyss {
+  flex-grow: 2;
+}
+.bars section .bar {
+  margin: 0;
+  flex-grow: 2;
+  clip-path: inset(0% 0% 0% 0%);
+  animation: flex 5s ease-in-out infinite alternate;
+  transition: filter 5s ease;
+}
+.bars section .bar:hover {
+  filter: sepia(1);
+  transition: filter 0.1s ease;
+}
+.bars section .bar.white {
+  background: #ffffff;
+}
+.bars section .bar.black {
+  background: #000000;
+}
+.bars section .bar.yellow {
+  background: #ffff00;
+}
+.bars section .bar.cyan {
+  background: #00ffff;
+}
+.bars section .bar.green {
+  background: #00ff00;
+}
+.bars section .bar.magenta {
+  background: #ff00ff;
+}
+.bars section .bar.red {
+  background: #ff0000;
+}
+.bars section .bar.blue {
+  background: #0000ff;
+}
+.bars section .bar.purple {
+  background: #48098c;
+}
+.bars section .bar.slateBlue {
+  background: #0c4980;
+}
+.bars section .bar.grey {
+  background: #0a0809;
+}
+.bars section .bar.thin {
+  flex-grow: 0.5;
+}
+.bars section .bar.thicc {
+  flex-grow: 3;
+}
+.bars section .bar.exact {
+  flex-grow: 0;
+  width: 14.29%;
+}
+.bars section:nth-of-type(1) .bar:nth-of-type(1) {
+  animation-delay: 0.51s;
+}
+.bars section:nth-of-type(1) .bar:nth-of-type(2) {
+  animation-delay: 1.02s;
+}
+.bars section:nth-of-type(1) .bar:nth-of-type(3) {
+  animation-delay: 1.53s;
+}
+.bars section:nth-of-type(1) .bar:nth-of-type(4) {
+  animation-delay: 2.04s;
+}
+.bars section:nth-of-type(1) .bar:nth-of-type(5) {
+  animation-delay: 2.55s;
+}
+.bars section:nth-of-type(1) .bar:nth-of-type(6) {
+  animation-delay: 3.06s;
+}
+.bars section:nth-of-type(1) .bar:nth-of-type(7) {
+  animation-delay: 3.57s;
+}
+.bars section:nth-of-type(2) .bar:nth-of-type(1) {
+  animation-delay: 4.08s;
+}
+.bars section:nth-of-type(2) .bar:nth-of-type(2) {
+  animation-delay: 4.59s;
+}
+.bars section:nth-of-type(2) .bar:nth-of-type(3) {
+  animation-delay: 5.1s;
+}
+.bars section:nth-of-type(2) .bar:nth-of-type(4) {
+  animation-delay: 5.61s;
+}
+.bars section:nth-of-type(2) .bar:nth-of-type(5) {
+  animation-delay: 6.12s;
+}
+.bars section:nth-of-type(2) .bar:nth-of-type(6) {
+  animation-delay: 6.63s;
+}
+.bars section:nth-of-type(2) .bar:nth-of-type(7) {
+  animation-delay: 7.14s;
+}
+.bars section:nth-of-type(3) .bar:nth-of-type(1) {
+  animation-delay: 7.65s;
+}
+.bars section:nth-of-type(3) .bar:nth-of-type(2) {
+  animation-delay: 8.16s;
+}
+.bars section:nth-of-type(3) .bar:nth-of-type(3) {
+  animation-delay: 8.67s;
+}
+.bars section:nth-of-type(3) .bar:nth-of-type(4) {
+  animation-delay: 9.18s;
+}
+.bars section:nth-of-type(3) .bar:nth-of-type(5) {
+  animation-delay: 9.69s;
+}
+.bars section:nth-of-type(3) .bar:nth-of-type(6) {
+  animation-delay: 10.2s;
+}
+
+.title {
+  position: relative;
+  padding: 10vh 2vw;
+  margin: 10vh auto;
+  max-width: 500px;
+  aspect-ratio: 1/1;
+  flex-grow: 1;
+  border-radius: 0 50px 0 50px;
+  font-family: Montserrat;
+  font-size: 1.2rem;
+  backdrop-filter: blur(32px);
+  clip-path: polygon(0% 20%, 20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%);
+}
+
+h1 {
+	font-size: 200px;
+}
+.title h1, .title p {
+  position: relative;
+}
+
+@keyframes flex {
+  100% {
+    flex-grow: 5;
+    clip-path: inset(20% 20% 20% 20%);
+  }
+}
+@keyframes bg {
+  100% {
+    background-position: 0% 100%;
+  }
+}
